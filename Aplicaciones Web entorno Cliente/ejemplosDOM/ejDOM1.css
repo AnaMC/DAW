@@ -1,3 +1,7 @@
 .oculto{
 	visibility: hidden;
 }
+
+.visible{
+    visibility: visible;
+}
