@@ -22,7 +22,7 @@
                
             }
             
-            miBoton4
+            miBoton4.setAttribute('style', 'visibility:visible');
         }
 
         function rellenar() {
@@ -38,7 +38,13 @@
         }
         
         function mostrar(){ //Función que mostrará el párrafo ocultado
-            
+                    var ocultar = document.getElementsByClassName("ocultar"), 
+                ocultarLongitud = ocultar.length;
+            // Recorremos todos lo elementos cuya clase sea "ocultar"
+            for (var i = 0; i < ocultarLongitud; i++) {
+               ocultar[i].classList.add('visible');
+               
+            }  
         }
     }
 }());

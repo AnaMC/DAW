@@ -5,3 +5,7 @@
 .visible{
     visibility: visible;
 }
+
+#mostrar{
+    visibility: hidden;
+}
