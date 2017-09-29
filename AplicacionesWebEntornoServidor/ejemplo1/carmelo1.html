@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulario Carmelo</title>
+        <meta name="description" content="Practica sobre formularios">
+        <link rel="stylesheet" href="style.css">        
+    </head>
+    
+    <body>
+        
+        <div>
+            
+            <!--Para enviar por GET-->
+            <h4>GET</h4>
+			<br>
+            <form action="carmelo1get.php" method="get" enctype="application/x-www-form-urlencoded">
+                
+                <label for="nombre"> Introduzca su nombre: </label> <input type="text" id="nombre" name="nombre"> <!--El label hace referencia al ID del nombre para que funcione, de modo que                                         si hacemos click en "Introduzca su nombre:", el marcador de esritura aparecerá en el cuado de texto sin necesidad de clicar en este.-->
+                <br>
+                <br>
+                <label for="apellidos"> Introduzca sus apellidos: </label> <input type="text" id="apellidos" name="apellidos">
+                <br>
+                <br>
+                <input type="submit" value="Enviar Get">
+   
+            </form>
+            
+            <!--Para enviar por POST-->
+            <h4>POST</h4>
+			<br>
+            <form action="carmelo1post.php" method="post" enctype="application/x-www-form-urlencoded">
+                
+                <label for="nombre"> Introduzca su nombre: </label> <input type="text" id="nombre" name="nombre"> <!--El label hace referencia al ID del nombre para que funcione, de modo que                                         si hacemos click en "Introduzca su nombre:", el marcador de esritura aparecerá en el cuado de texto sin necesidad de clicar en este.-->
+                <br>
+                <br>
+                <label for="apellidos"> Introduzca sus apellidos: </label> <input type="text" id="apellidos" name="apellidos">
+                <br>
+                <br>
+                <input type="submit" value="Enviar Post">
+				
+			<!--Para enviar por GET 2-->
+			<br>
+            <h4>GET 2ºDestino</h4>
+			<br>
+            <form action="carmelo1ambos.php" method="get" enctype="application/x-www-form-urlencoded">
+                
+                <label for="nombre2"> Introduzca su nombre: </label> <input type="text" id="nombre" name="nombre"> <!--El label hace referencia al ID del nombre para que funcione, de modo que                                         si hacemos click en "Introduzca su nombre:", el marcador de esritura aparecerá en el cuado de texto sin necesidad de clicar en este.-->
+                <br>
+                <br>
+                <label for="apellidos2"> Introduzca sus apellidos: </label> <input type="text" id="apellidos" name="apellidos">
+                <br>
+                <br>
+                <input type="submit" value="Enviar Get">
+   
+            </form>
+            
+            <!--Para enviar por POST 2-->
+            <h4>POST 2ºDestino</h4>
+			<br>
+            <form action="carmelo1ambos.php" method="post" enctype="application/x-www-form-urlencoded">
+                
+                <label for="nombre2"> Introduzca su nombre: </label> <input type="text" id="nombre" name="nombre"> <!--El label hace referencia al ID del nombre para que funcione, de modo que                                         si hacemos click en "Introduzca su nombre:", el marcador de esritura aparecerá en el cuado de texto sin necesidad de clicar en este.-->
+                <br>
+                <br>
+                <label for="apellidos2"> Introduzca sus apellidos: </label> <input type="text" id="apellidos" name="apellidos">
+                <br>
+                <br>
+                <input type="submit" value="Enviar Post">
+
+            </form>
+        </div>
+        
+    </body>
+    
+    <footer>
+    </footer>
+    
+</html>
