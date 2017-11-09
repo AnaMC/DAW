@@ -1,0 +1,31 @@
+.wrapper{
+    margin: 0 auto;
+    width: 600px;
+    height: auto;
+}
+
+#caja{
+    
+    background-color: dimgray;
+    height: 40px;
+    width: 40px;
+    display: block;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    top: 200px;
+    font-family: sans-serif;
+                    /*Al especificarlo aquí es más eficiente*/
+    transition-property: border-radius, background-color;
+    transition-duration: 0.5s;
+    
+}
+
+#caja:hover{  
+    
+    /* Al pasar el ratón por encima cambiará el color y los bordes del contenedor se redondearán, durando la animación 0.5s */
+    
+    border-radius: 50%;
+    background-color: lightgreen;
+   
+}

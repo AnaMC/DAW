@@ -1,0 +1,26 @@
+#wrapper{
+    width: 900px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: lightgray;
+    color: #2C2C2C;
+    font: normal 100% Cambria, Georgia, serif; /*TOMA EL 100 DEL TAMAÑO ESTANDAR DE LA FUENTE DEL NAV (NORMALMENTE 16PX)*/
+}
+
+h1{
+    font-size: 1.5em; /*24/16=1.5em*/
+                        /*24 -> tamaño que queremos, 16-> Tamaño de la fuente establecido en el navegador*/
+    font-style: italic;
+    font-weight: normal;
+}
+
+h1 a{
+    color: fuchsia;
+    font: bold 11px Calibri, Optima , Arial , sans-sefrif; /*11/24 = 0.4583*/ 
+    /*11-> tamaño que queremos, 24-> tamaño de fuente del elemento padre*/
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+}

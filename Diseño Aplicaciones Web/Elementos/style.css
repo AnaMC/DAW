@@ -1,0 +1,20 @@
+li:nth-child(2n+1){     /*Cambia el color de los emlementos impares*/
+    color: fuchsia;
+    list-style:circle; 
+}
+
+li:nth-child(even){     /*Cambia el color de los emlementos pares*/
+    color: dodgerblue;
+}
+
+li:first-child{         /*Pone en negrita el primer elemento de la lista*/ 
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+li:last-child{          /*Pone en negrita el último elemento de la lista*/
+    font-size: 20px;
+    font-weight: bold;
+    
+}
