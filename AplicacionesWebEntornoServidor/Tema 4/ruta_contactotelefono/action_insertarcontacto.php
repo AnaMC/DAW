@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="action_doInsert.php" method="GET">
+    <h1>Insertar contacto</h1>
+    <form action="action_doInsert.php" method="POST">
         <input type="text" name="nombre"/>
         <input type="submit" value="Submit"/>
-    </form> 
+        <input type="text" value="" name="number" placeholder="Numero de telefono" required>
+        <input type="text" value="" name="description" placeholder="Descripción" required>
+    </form>
 </body>
 </html>

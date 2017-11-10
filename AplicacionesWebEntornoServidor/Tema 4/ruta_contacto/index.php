@@ -2,7 +2,8 @@
     require'../classes/AutoLoad.php';
     $db = new DataBase();
     $gestor = new ManagerContacto($db);
-    $listaDeContactos = $gestor->getAll();
+   
+   
     
     $action = Request::get('action');
     $r = Request::get('r');
