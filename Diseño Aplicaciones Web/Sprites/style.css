@@ -1,0 +1,67 @@
+/*28px x 2.52px*/
+body{
+     background-color: cadetblue;
+}
+
+.contenedor{
+                            /*CENTRADO*/
+    margin: 0 auto;
+    width: 252px; /*Para que se centre hay que ponerlo OBLIGATORIAMENTE*/
+
+
+}
+
+ul.categorias{
+    
+    font-family: "Helvetica" ,"Arial", sans-serif;
+    font-weight: bold;
+    list-style-type: none;  
+    /*La lista será el contenedor de la imagen, por lo que quitçraremos marfçgenes..
+    */
+    margin: 0;
+    padding: 0;
+    
+}
+
+.categorias li a{
+    
+    height: 28px;
+    width: 217px;
+    display: block; /*Con display block podemos asignar el width y H. de lo contrario será el texto el que lleve ''La voz cantante''*/
+    text-transform: uppercase; /*Pasa todo el texto a Mayus*/
+    font-size: 13px;
+    line-height: 28px; /*Truqui para alinear el texto con su contenedor de forma vertical, ya que el ancho de linea es igual que el alto del contenedor ¡¡Solo sirve para textos con una sola línea!!*/
+    margin-bottom: 5px;
+    text-decoration: none; /*quitamos decoracion a las anclas*/
+    background-color: aquamarine;
+    background: url(sprite.png) no-repeat; 
+    padding-left: 35px;
+    
+    /*De momento aparecera con fondo neutro, ya que todos tienen el mismo fondo en común(el inicio, punto del eje 0.0)*/ /*La banda neutra está justo en la esquina del eje de nuestro gráfico (Explicación wenawena)*/
+    
+}
+
+/*la imagen aparece cuando ponemos el cursor encima*/
+
+li.jquery a:hover{
+    color: deepskyblue;
+    background-color: deeppink;
+    background-position: 0px -28px; /*Con esto subimos 28px la imagen, lo que nos permitirá visializar la imagen correspondiente*/
+}
+
+li.wordpress a:hover{
+    color: deepskyblue;
+    background-color: deeppink;
+    background-position: 0px -56px; 
+}
+li.html5 a:hover{
+    color: deepskyblue;
+    background-color: deeppink;
+    background-position: 0px -84px; 
+}
+
+li.css3 a:hover{
+    color: deepskyblue;
+    background-color: deeppink;
+    background-position: 0px -112px; 
+    }

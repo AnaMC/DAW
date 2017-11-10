@@ -1,0 +1,165 @@
+#wrapper{
+    width: 1580px;
+    margin: 0 auto;
+}
+
+/*#marco{
+    position: relative;
+    height: 1000px;
+    width: 1000px;
+     margin: 0 auto;
+    background-color: aliceblue;
+}*/
+
+#arena{
+    position: absolute;
+    height: 190px;
+    width: 234px;
+    margin-left: 460px;
+    margin-top: 170px;
+    background-image: url(Images/isla2.png);
+    background-repeat: no-repeat;
+    z-index: 50;
+}
+
+#agua{
+    position: absolute;   
+    height: 46px;
+    width: 427px;
+    margin-left: 365px;
+    margin-top: 356px;
+    background-image: url(Images/reflejoAgua2.png);
+    background-repeat: no-repeat;
+    z-index: 40;
+}
+
+#caseta{
+    position: absolute;
+    height: 81px;
+    width: 83px;
+    background-image: url(Images/caseta.png);
+    background-repeat: no-repeat;
+    margin-top: 232px;
+    margin-left: 529px;
+    z-index: 52;
+}
+
+#reflejo{
+    position: absolute;
+    height: 116px;
+    width: 336px;
+    margin-left: 411px;
+    margin-top: 361px;
+    background-image: url(Images/reflejo.png);
+    background-repeat: no-repeat;
+    z-index: 40;
+}
+
+#cielo{
+    position: absolute;
+    height: 321px;
+    width: 476px;
+    margin-left: 340px;
+    margin-top: 35px;
+    background-color: #9EDDE1;
+    z-index: 30;
+}
+
+
+#mar{
+    position: absolute;
+    height: 250px;
+    width: 476px;
+    margin-left: 340px;
+    margin-top: 356px;
+    background-color: deepskyblue;
+    z-index: 39;
+}
+
+#sol{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;  
+    background-color: orange;
+    animation-name: faseS;
+    animation-duration: 20s;
+    z-index: 31;
+}
+
+
+@keyframes faseS{
+    from{
+        left: 348px;
+        top: 335px;
+        
+        
+    }
+    
+    7.14%{
+        left: 418px;
+        top: 175px;
+    }
+    
+    14.28%{
+        left: 440px; 
+        top: 128px;
+              
+    }
+    
+     21.42%{
+        left: 700px;
+        top: 100px;     /*C*/
+    }
+     28.56%{
+        left: 890px;
+        top: 128px;
+    }
+     35.7%{
+        left: 900px;
+        top: 200px;   /*finsol*/
+         opacity: 1;
+    }
+    
+     42.84%{
+        opacity: 0.6;
+        left: 1000px;
+    }
+     49.98%{
+        opacity: 0.6;
+        left: 1000px;
+    }
+     57.12%{
+        opacity: 0.6;
+        left: 1000px;
+    }
+     64.26%{
+        opacity: 0.6;
+        left: 1000px;
+    }
+     71.4%{
+        opacity: 0.6;
+        left: 1000px;
+    }
+      78.54%{
+        opacity: 0.6;
+        left: 1000px;
+    }
+      85.68%{
+        opacity: 0.6;
+        left: 1000px;
+    }
+
+      92.82%{
+        opacity: 0.6;
+        left: 1000px;
+    }
+
+    to{
+        opacity: 1;
+        left: 3000px;
+        background-color: red;
+    }
+
+
+}
