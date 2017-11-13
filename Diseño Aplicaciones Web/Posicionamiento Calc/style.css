@@ -1,0 +1,20 @@
+/*Posicionamiento de un elemento hijo en el centro de su elemento padre verticalmente*/
+
+#parent{
+    position: relative;
+    border: solid 1px black;
+    width: 300px;
+    height: 200px;
+    font: bold 1em arial;
+    text-align: center;
+}
+
+#parent > div{
+    position: absolute;
+    top: calc(50% - 2em);
+    left: calc(50% - 2.5em);
+    width: 5em;
+    height: 4em;
+    border: solid thin red;
+    background: grey;
+}
