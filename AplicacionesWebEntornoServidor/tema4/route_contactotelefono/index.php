@@ -7,6 +7,23 @@ $listaDeContactosTelefonos = $gestor->getAll();
 
 $action = Request::read('action');
 $result = Request::read('r');
+$rows = $gestor -> count;
+
+$page = Request::read('page');
+if($page === null){
+    $page=1;
+}
+
+
+/*$page = 1; //Página actual*/
+$rpp = 3;
+$offset = $rpp * ($page -1);
+$rowcount = $rpp;
+$pages = ceil($rows / $rpp); // Numero total de páginas
+
+$listaDeContactosTelefonos =$gestor-> getAllLimit($offset, $rpp);
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,6 +52,7 @@ $result = Request::read('r');
                     $telefono = $contactoTelefono['telefono'];
                     ?>
                     <tr>
+                        
                         <td><?= $key ?></td>
                         <td><a href="action_vieweditcontacto.php?idcontacto=<?php echo $contacto->getId();?>"><?= $contacto->getNombre() ?></a></td>
                         <td><a href="action_viewedittelefono.php?idtelefono=<?php echo $telefono->getId();?>"><?= $telefono->getTelefono() ?></a></td>
@@ -55,9 +73,16 @@ $result = Request::read('r');
                     <?php
                 }
                 ?>
+                <tr>
+                    <td colspan = 5>
+                        <a href='?page=1'>&lt;&lt;</a>
+                        <a href='?page=<?php echo max($page - 1, 1); ?>'>&lt;</a>
+                        <a href='?page=<?php echo min($page + 1, $pages); ?>'>&gt;</a>
+                        <a href='?page=<?php echo $pages; ?>'>&gt;&gt;</a>
+                </tr>
             </tbody>
         </table>
     </body>
 </html>
 <?php
-$db->closeConnection();
+$db->closeConnection(); 
