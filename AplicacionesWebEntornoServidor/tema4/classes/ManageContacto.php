@@ -92,4 +92,7 @@ class ManageContacto implements Manager {
         return $filasAfectadas;
     }
 
+
+      
+
 }
