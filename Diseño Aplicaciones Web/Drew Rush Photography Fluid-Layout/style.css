@@ -1,0 +1,64 @@
+
+@import url(http://reset5.googlecode.com/hg/reset.min.css);
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-size: 16px;
+}
+
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.seccionesPrincipales{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#fotoInicio{
+    position: absolute;
+    height: 100vh;
+    width: 100vw; 
+    background-image: url(Images/ciervo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.barraNav{
+    position: absolute;
+    width:100%;
+    height: 6%; /*72/900 = 0.06  900-> segun la altura de la sección en el Mockup */
+    background-color: #2F3845;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.barraNav p{
+    position: absolute;
+    color: white;
+    margin-left: 40%;  /*926/1580=0.586*/
+    font-size: 1em;
+}
+
+
+/**/
+@media screen and (max-width : 950px){
+
+.barraNav{
+ background-color: red;
+}
+    
+.barraNav p{
+    margin-left: 5%;  /*926/1580=0.586*/
+    font-size: 1em;
+}
+
+
+}
