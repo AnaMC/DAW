@@ -1,0 +1,130 @@
+/*CSS*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Barlow|Emilys+Candy|PT+Sans');
+
+
+            /*Reglas de los 3 niveles de la cabecera*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #d1c2ae;
+    background-image: url(pattern.jpg);
+    color: #443526;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.wrapper{
+    min-width: 320px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.3);
+    padding: 10px;
+}
+
+article, aside, dialog, figure, 
+footer, header, hgroup, nav, section{
+    display: block; /*Por si el navegador no es compatible con html5 para que las etiquetas semánticas las ponga en bloque*/
+}
+
+h1, h2, h3{
+     font-family: 'Barlow', sans-serif; 
+     font-weight: normal;
+     text-transform: uppercase;
+     text-align: center;    
+}
+
+                      /*Fin de las reglas de los 3 niveles de la cabecera*/
+
+h1{
+    font-family: 'Barlow', sans-serif;
+    font-size: 300%;
+    font-weight: 800;
+    color: dodgerblue;
+}
+
+.intro{
+    margin-bottom: 1.5em;
+    font-size: 125%;
+    line-height: 1.5;
+}
+
+                      /*Centrado del logo con flex*/
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.tagline{
+    font-family: 'Emilys Candy';
+    font-size: 1.6em;
+    color: #ff00a7;
+    text-shadow: 1px 1px 1px grey;
+}
+
+.list-nav{
+    display: flex;
+    justify-content: space-around;  /*El espacio de los links del navegador queda repartido por igual entre todos los items, de modo que ninguno se quedará mas separado que otro, sobretodo por los extremos.*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Emilys Candy';
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+
+/*Ejercicio usando PSEUDOCLASES: Hacer que cada botón sea de un color diferente y con un hover(Se hará mas adelante) -Sin tocar el HTML-*/
+
+.list-nav li a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.list-nav li:first-child a{    /*Primer hijo*/
+    background-color: lightcyan;
+    color: royalblue;
+    border-radius: 6px;
+}
+
+.list-nav li:nth-child(2) a{
+    background-color: lightgreen;
+    color: darkgreen;
+     border-radius: 6px;
+}
+
+.list-nav li:nth-child(3) a{
+    background-color: lightyellow;
+    color: darkorange;
+     border-radius: 6px;
+}
+
+.list-nav li:last-child a{     /*Último hijo*/
+    background-color: lightcoral;
+    color: darkred;
+    border-radius: 6px;
+}
+
+/*Fin Ejercicio*/
+
+/*Form builder*/
+
+.builder{
+    display: flex; /*Todo el CONTENEDOR es flex*/
+    flex-wrap: wrap; /*Cuando un item se quede sin espacio se baja a la fila siguiente*/
+    justify-content: space-between; /*Queremos que nos separe los items entre sí*/
+}
+
+.builder ul li{
+    list-style-type: none;
+}
+
+.component{
+    flex 1 1 200px; /*cada uno de los items(que son components) coge una parte del espacio, si falta espacio se reducen en la misma proporción(todos se reparten el espacio uniformemente, y si falta, los cuatro lo ceden en la misma proporción), parte de los 200px, ya que si le ponemos menos no entra el contenido en el frame. */
+    display:flex ; /*Lo convertimos en un contenedor flex*/
+}
