@@ -112,6 +112,57 @@ h1{
 
 /*Fin Ejercicio*/
 
+.component{
+    flex 1 1 200px; /*cada uno de los items(que son components) coge una parte del espacio, si falta espacio se reducen en la misma proporción(todos se reparten el espacio uniformemente, y si falta, los cuatro lo ceden en la misma proporción), parte de los 200px, ya que si le ponemos menos no entra el contenido en el frame. */
+    display:flex ; /*Lo convertimos en un contenedor flex*/
+    flex-direction: column;
+    margin: 20px 10px;
+    padding 20px;
+    background: hsla(0,0%,100%, 0.3); /*hsla -> Composicion de colores por % con canal aplpha para la opacidad*/
+}
+
+.component h2{
+    position: relative;
+    margin: 0 0.5em 0;
+    padding: 10px 0 0 0;
+}
+
+/*Colocar un icono delante de los h2*/
+
+.component h2:before{
+    content:'';
+    display: block;
+    position: absolute;
+    left: 60px;
+    width: 30px;
+    height: 30px;
+    margin-left: -55px;
+    background-image: url(cookie.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*Colocamos a cada uno en su línea*/
+
+#marshmallow h2:before{
+    left: 55px;
+}
+#frame h2:before{
+    left: 90px;
+}
+
+#candy h2:before{
+    left: 100px;
+}
+
+#accessories h2:before{
+    left: 58px;
+}
+
+.component ul{
+    flex: 1;
+}
+
 /*Form builder*/
 
 .builder{
@@ -122,9 +173,15 @@ h1{
 
 .builder ul li{
     list-style-type: none;
+    line-height: 1.5em; /*Separar un poco las filas entre sí.*/
 }
 
-.component{
-    flex 1 1 200px; /*cada uno de los items(que son components) coge una parte del espacio, si falta espacio se reducen en la misma proporción(todos se reparten el espacio uniformemente, y si falta, los cuatro lo ceden en la misma proporción), parte de los 200px, ya que si le ponemos menos no entra el contenido en el frame. */
-    display:flex ; /*Lo convertimos en un contenedor flex*/
+.component ul{
+    flex: 1;
+    display: flex;
+    flex-direction: column; /*Evitamos que "se expanda en fila"*/
+}
+
+.component ul li:last-child{
+    margin-top: auto;
 }
