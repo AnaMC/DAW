@@ -1,0 +1,40 @@
+.navigation{
+    list-style: none;
+    margin: 0;
+    background: deepskyblue;
+    border-bottom: 2px solid hotpink;
+    box-shadow: 0 3px 2px rgba (0,0,0,0.1);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation a{
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.navigation a:hover{
+    background: #68d9ff;
+}
+
+@media all and (max-width:600px){
+    .navigation{
+        flex-flow: column wrap; /*Shorthand de flex direction y ¿row?*/
+        padding: 0;
+    }
+    
+    .navigation a{
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .navigation li:last-of-type a{
+        border-bottom: none;
+    }
+}
