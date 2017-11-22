@@ -1,6 +1,6 @@
 <?php
 
-class AutoLoad {
+class AutoLoad { /*Autocarga de clases*/
 
     static function searchClass($className) {
         $archivo = dirname(__FILE__) . '/' . $className . '.php';
@@ -11,4 +11,4 @@ class AutoLoad {
 
 }
 
-spl_autoload_register('AutoLoad::searchClass');
+spl_autoload_register('AutoLoad::searchClass'); /*Parte de la autocarga*/

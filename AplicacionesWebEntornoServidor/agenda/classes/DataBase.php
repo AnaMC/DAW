@@ -21,11 +21,11 @@ class DataBase {
     }
 
     function execute($sql, array $parametros = array()) {
-        $this->sentencia = $this->conexion->prepare($sql);
+        $this->sentencia = $this->conexion->prepare($sql); /*$this->sentencia hace referencia al atributo sentencia */
         foreach ($parametros as $nombreDelParametro => $valorDelParametro) {
-            $this->sentencia->bindValue($nombreDelParametro, $valorDelParametro);
+            $this->sentencia->bindValue($nombreDelParametro, $valorDelParametro); /*Guardamos los parametros que nos han llegado en la sentencia sql*/
         }
-        $r = $this->sentencia->execute();//true o false
+        $r = $this->sentencia->execute();//true o false /*Ejecutamos la sentencia sql*/
         /*
         echo $sql . '<br>';
         echo Util::varDump($parametros);

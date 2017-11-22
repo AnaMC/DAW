@@ -21,12 +21,12 @@ $usuario = $sesion->getUser();
         <?php
         echo $mensaje;
         ?>
-        <h1>agenda</h1>
+        <h1>Agenda</h1>
         <hr>
         <?php
         if($usuario === null) {
         ?>
-        <h2>date de alta</h2>
+        <h2>Darse de alta</h2>
         <form method="post" action="usuario/doalta.php">
             <input type="email" name="correo" placeholder="correo" required>
             <input type="password" name="clave" placeholder="clave" required>
@@ -34,12 +34,20 @@ $usuario = $sesion->getUser();
             <input type="submit" value="Submit"/>
         </form>
         <hr>
-        <h2>loguéate</h2>
+        <h2>Login</h2>
         <form method="post" action="usuario/dologin.php">
             <input type="email" name="correo" placeholder="correo" required>
             <input type="password" name="clave" placeholder="clave" required>
             <input type="submit" value="Submit"/>
         </form>
+        
+        <form method="post" action="usuario/restlogin.php">
+        <br>
+        <br>
+        <input type="email" name="correo" placeholder="correo" required>
+         <input type="submit" value="He olvidado mi contraeña"/>
+        </form>
+        
         <?php
         } else {
             echo '<h1>Hola ' . $usuario->getCorreo() . '</h1>';
