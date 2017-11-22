@@ -115,7 +115,7 @@ h1{
 .component{
     flex 1 1 200px; /*cada uno de los items(que son components) coge una parte del espacio, si falta espacio se reducen en la misma proporción(todos se reparten el espacio uniformemente, y si falta, los cuatro lo ceden en la misma proporción), parte de los 200px, ya que si le ponemos menos no entra el contenido en el frame. */
     display:flex ; /*Lo convertimos en un contenedor flex*/
-    flex-direction: column;
+    flex-direction: column; /*Evitamos que "se expanda en fila"*/
     margin: 20px 10px;
     padding 20px;
     background: hsla(0,0%,100%, 0.3); /*hsla -> Composicion de colores por % con canal aplpha para la opacidad*/
@@ -159,8 +159,12 @@ h1{
     left: 58px;
 }
 
-.component ul{
+.component ul{ /*Los li cogen un sangrad automáticamente*/
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0; /*Quitamos el sangrado*/
+    margin: 0;
 }
 
 /*Form builder*/
@@ -176,12 +180,132 @@ h1{
     line-height: 1.5em; /*Separar un poco las filas entre sí.*/
 }
 
-.component ul{
-    flex: 1;
+.component ul li:last-child{
+    margin-top: auto;    
     display: flex;
-    flex-direction: column; /*Evitamos que "se expanda en fila"*/
+    align-items: center;
 }
 
-.component ul li:last-child{
-    margin-top: auto;
+.component li{
+    margin-bottom: 0.5em; /*Espacio entre las filas de elementos*/
 }
+
+.component li:last-child label{
+    margin-right: 10px;
+}
+
+.component .other-name{
+    flex: 1;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+}
+
+.action{
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin 0 0 0 20px;
+    text-align: center;
+}
+
+.flexbox . action label{
+    margin-right: 10px;
+}
+
+.action label{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: normal;
+    font-size: 112.5%;
+    text-transform: uppercase;
+}
+
+.action input{
+    flex: 1;
+    display: block; /*FALLBACK*/
+    width: 100%; /*FALLBACK*/
+    box-sizing: border-box; /*FALLBACK*/
+}
+
+.action button{
+    flex: 1 1 100%;
+    margin-top: 10px;
+    background-color: crimson;
+    padding: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 800;
+    border: none;
+}
+                                            /*GALERIA*/
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center; /*FALL BACK, test*/
+}
+
+.gallery-item{
+    flex: 1 0 200px;
+    margin: 0 0 10px 10px;
+    padding: 20px;
+    border-radius: 2px;
+    border: 1px solid hsl(30, 28%,20%);
+    background: hsl(30,28%,20%);
+    color: hsl(30,28%,90%);
+}
+
+.gallery-item:hover {
+    background: hsl(30, 28%, 20%);
+    color: #f5a83e;
+    cursor: pointer; /*Cambiamos la forma del cursor*/
+}
+
+.gallery-item h3{
+    margin: 0 0 .5em 0;
+}
+
+.gallery-item ul{
+    margin: 0;
+    padding: 5;
+    list-style: square;
+    text-align: left;
+}
+
+                    /*Paginacion*/
+
+.pagination{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 10px 40px 10px;
+    padding: 0;
+    list-style: none;    
+}
+
+.pagination li{
+    order: 2;    /*Los hijos de flex tienen la propiedad order, podemos cambiar el orden con eta propiedad.*/
+    text-align: right;
+}
+
+.pagination a{
+    display: inline-block;
+    margin: 0 0 10px 0;
+    padding: 10;
+    /*border-radius: 2px;*/
+    border: 1px solid #E9E2D8;
+    /*border: 1px solid;*/ /*No me gustaba y lo quité*/
+    
+}
+
+
+
+
+
+
+
+
+

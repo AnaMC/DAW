@@ -1,0 +1,2 @@
+- /*El recuadro "Other" toma el espacio sobrante y se baja al final, solo le afecta a "Marsmallow porque es el único que tiene espacio disponible"*/
+
