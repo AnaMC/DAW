@@ -6,7 +6,7 @@ class DataBase {
 
     function __construct($clase = 'Constants') {
         try{
-            $this->conexion = new PDO(
+            $this->conexion = new PDO( /*Inyeccion SQL tiene consultas preparadas "mejoradas" y "acceso único, nuestro sitio será menos atacable. Sirve para MySQL y otras BD"*/
                 'mysql:host=' . $clase::SERVER . ';dbname=' . $clase::DATABASE,
                 $clase::USER,
                 $clase::PASSWORD,

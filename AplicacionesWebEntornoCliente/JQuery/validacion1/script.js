@@ -3,7 +3,6 @@ $(function(){
     $('form').submit(function(e){
         var c= validarCorreo();
         var n= compararNombre();
-        
         if(!c || !n){
             e.preventDefault();  //"Se para ....
         }  
@@ -16,10 +15,10 @@ $(function(){
         var estadoCorreo = false;
         
         //Quitamos espacios anteriores y posteriores del campo antes de validarlo
-        if(regex.test(correo.trim())){
+        if(regex.test(correo.trim()) && correo !== ""){     /*Además de ser un correo no puede ser una cadena vacía*/
            estadoCorreo = true;
         }else{
-            alert('Campo incorrecto');           
+            var span = $('.mensaje').text('*Campo incorrecto'); 
         }
         return estadoCorreo;
     }
@@ -30,11 +29,10 @@ $(function(){
         var nombreB = $('input[name="nombreB"]').val();
         var estadoNombre = false;
         //Quitamos posibles espacios
-        if(nombreA.trim() === nombreB.trim()){
+        if(nombreA.trim() === nombreB.trim() && nombreA !== "" && nombreB !== ""){  /*Además de ser iguales no pueden ser cadenas vacías*/
             estadoNombre=true;
-            alert('guay2');
         }else{
-            alert('Campo incorrecto');           
+            var span = $('.mensajeN').text('*Campo incorrecto');           
         }
         return estadoNombre;
     }    

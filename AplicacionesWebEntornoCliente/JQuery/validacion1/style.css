@@ -3,15 +3,17 @@
     margin: 0 auto;
 }
 
-#enviar{
-    text-align: center;
+h3{
+    text-decoration: underline;
+    font-family: sans-serif;
 }
 
 .campos{
     width: 400px;
-    height: 30%;
     margin-left: 30%;
     margin-top: 5%;
-    text-align: center;
-    background-color: aliceblue;
+}
+
+.ast{
+    color: red;
 }

@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);             /*Ver errores "pequeños"*/
+ini_set('display_errors',1);
 
 class AutoLoad { /*Autocarga de clases*/
 
