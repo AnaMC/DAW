@@ -10,5 +10,7 @@ $decoded = JWT::decode($dato, $clave, array('HS256'));
 }catch (Exception $e){
     header('Location: ../index.php');
     exit;
+    
+    
 }
 echo Util::varDump($decoded);

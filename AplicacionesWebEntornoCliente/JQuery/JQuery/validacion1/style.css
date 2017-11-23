@@ -1,0 +1,17 @@
+.warapper{
+    widows: 100%;
+    margin: 0 auto;
+}
+
+#enviar{
+    text-align: center;
+}
+
+.campos{
+    width: 400px;
+    height: 30%;
+    margin-left: 30%;
+    margin-top: 5%;
+    text-align: center;
+    background-color: aliceblue;
+}
