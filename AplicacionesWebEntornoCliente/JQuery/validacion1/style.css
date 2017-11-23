@@ -1,5 +1,5 @@
 .warapper{
-    widows: 100%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -12,8 +12,4 @@ h3{
     width: 400px;
     margin-left: 30%;
     margin-top: 5%;
-}
-
-.ast{
-    color: red;
 }
