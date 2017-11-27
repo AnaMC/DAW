@@ -12,8 +12,8 @@ class Controlador{
         return $this->modelo;
     }
     
-    function index(){
-        $this->getModel()->setDato('Estoy en la ruta Index en la acción Index');
+    function render($accion){  /*En vez de tener un index tiene un render al que le llega una acción que le llega de dooptput (Controlador frontal)*/
+        return $this->getModel()->getDato;
     }
     
     
