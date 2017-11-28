@@ -3,6 +3,7 @@ $(function(){
     $('form').submit(function(e){
         var c= validarCorreo();
         var n= compararNombre();
+        
         if(!c || !n){
             e.preventDefault();  //"Se para ....
         }  
@@ -14,7 +15,7 @@ $(function(){
         var regex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
         var estadoCorreo = false;
         
-        //Quitamos espacios anteriores y posteriores del campo antes de validarlo
+        //Con .trim() quitamos espacios anteriores y posteriores del campo antes de validarlo
         if(regex.test(correo.trim()) && correo !== ""){     /*Además de ser un correo no puede ser una cadena vacía*/
            estadoCorreo = true;
         }else{
