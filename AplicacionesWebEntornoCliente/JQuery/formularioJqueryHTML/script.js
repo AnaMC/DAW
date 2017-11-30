@@ -32,7 +32,6 @@ $(function(){
     function validarPassword(){
         
         var pass = ('input[name="password"]').val();
-        
         var verifi = ('input[name="verificar"]').val();
         var estadoVerifi = false;
         
