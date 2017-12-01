@@ -16,7 +16,7 @@ $(function(){
     
     function validarCorreo(){
         
-        var correo = $('input[name="email"]').val();
+        var correo = $('#email').val();
         var regex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
         var estadoCorreo = false;
         
@@ -24,23 +24,24 @@ $(function(){
         if(regex.test(correo.trim()) && correo !== ""){     /*Además de ser un correo no puede ser una cadena vacía*/
            estadoCorreo = true;
         }else{
-            var span = $('.mensaje').text('*Campo incorrecto'); 
+            var spanE = $('#mensajeE');
+            spanE.text('*Campo incorrecto'); 
         }
         return estadoCorreo;
     }
     
     function validarPassword(){
         
-        var pass = ('input[name="password"]').val();
-        var verifi = ('input[name="verificar"]').val();
+        var pass = $('#password').val();
+        var verifi = $('#verificar').val();
         var estadoVerifi = false;
         
         if (pass.length===6 && pass === verifi){
             estadoVerifi = true;
             
         }else{
-            /*Crear nodo span y meterlo en el dom al lugar donde le corresponda*/ /*Modificar el DOM con jq*/
-            var span = $('.mensajePass').text('*Campo incorrecto, las contraseña deben tener 6 caracteres y ser iguales');
+            var spanP = $('#mensajeP');
+            spanP.text('*Campo incorrecto');
         }
         return estadoVerifi; 
     }
