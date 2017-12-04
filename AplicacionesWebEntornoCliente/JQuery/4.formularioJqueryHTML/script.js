@@ -42,8 +42,28 @@ $(function(){
         }else{
             var spanP = $('#mensajeP');
             spanP.text('*Campo incorrecto');
+            
+            var spanPV = $('#mensajePV');
+            spanPV.text('*Campo incorrecto');
+            
         }
         return estadoVerifi; 
     }
+    
+    function validarNombre(){
+        
+        var nombre = $('#nombre').val();
+        var estadoNombre=false;
+        
+        if(nombre.length != ""){
+            estadoNombre=true;
+        }else{
+            /*  Sacar mensaje de error*/
+        } 
+        return estadoNombre;
+        
+    }
+    
+    
     
 });
