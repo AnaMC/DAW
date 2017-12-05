@@ -98,7 +98,7 @@ $(function(){
     
     function validarCP(){
         
-        var cp = $('#codPostal');
+        var cp = $('#codPostal').val();
         var estadocp = false;
         var exprCp = /^[0-9]$/;
         
@@ -113,7 +113,7 @@ $(function(){
     
     function validarTelf(){
         
-        var telf = $('#telefono');
+        var telf = $('#telefono').val();
         var estadoTelf = false;
         var exprTelf = /^((\+?34([ \t|\-])?)?[9|6|7]((\d{1}([ \t|\-])?[0-9]{3})|(\d{2}([ \t|\-])?[0-9]{2}))([ \t|\-])?[0-9]{2}([ \t|\-])?[0-9]{2})$/ ;
         
@@ -124,6 +124,6 @@ $(function(){
             mensajTelf.text('*Campo incorrecto');
         }
         return estadoTelf;
-    
+    }
     
 });
