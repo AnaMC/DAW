@@ -1,13 +1,17 @@
 $(function(){
    
     $('form').submit(function(e){
-        var c= validarCorreo();
-        // var n= compararNombre();
-        var p= validarPassword();
+        var c = validarCorreo();
+        var p = validarPassword();
+        var n = validarNombre();
+        var a = validarApellidos();
+        var pr = validarProvincia();
+        var cp = validarCP();
+        var t = validarTelf();
         
         /*Terminar de añadir*/
             
-        if(!c || !p){ /*Terminar de añadir*/
+        if(!c || !p || !n || !a || !pr || !cp || !t){ /*Terminar de añadir*/
             e.preventDefault();  //"Se para ....
         }else{
             alert ("enviado");
@@ -55,15 +59,71 @@ $(function(){
         var nombre = $('#nombre').val();
         var estadoNombre=false;
         
-        if(nombre.length != ""){
-            estadoNombre=true;
+        if(nombre.length !== 0){
+            estadoNombre = true;
         }else{
-            /*  Sacar mensaje de error*/
+            var mensajeN = $('#mensajeN');
+            mensajeN.text('*Campo incorrecto');
         } 
         return estadoNombre;
-        
     }
     
+    function validarApellidos(){
+        
+        var ape = $('#apellidos').val();
+        var estadoApe = false;
+        
+        if(ape.length !== 0){
+            estadoApe = true;
+        }else{
+            var mensajeA = $('#mensajeA');
+            mensajeA.text('*Campo incorrecto');
+        }
+        return estadoApe;
+    }
+    
+    function validarProvincia(){
+        
+        var prov = $('#provincia').val();
+        var estadoprov = false;
+        
+        if(prov.length === 2){
+            estadoprov = true;
+        }else{
+            var mensajePr = $('#mensajePr');
+            mensajePr.text('*Campo incorrecto');
+        }
+        return estadoprov;
+    }
+    
+    function validarCP(){
+        
+        var cp = $('#codPostal');
+        var estadocp = false;
+        var exprCp = /^[0-9]$/;
+        
+        if(exprCp.test(cp.trim()) && cp.length === 9){
+             estadocp = true;
+        }else{
+            var mensajeCp = $('#mensajeCp');
+            mensajeCp.text('*Campo incorrecto');
+        }
+        return estadocp;
+    }
+    
+    function validarTelf(){
+        
+        var telf = $('#telefono');
+        var estadoTelf = false;
+        var exprTelf = /^((\+?34([ \t|\-])?)?[9|6|7]((\d{1}([ \t|\-])?[0-9]{3})|(\d{2}([ \t|\-])?[0-9]{2}))([ \t|\-])?[0-9]{2}([ \t|\-])?[0-9]{2})$/ ;
+        
+        if(exprTelf.test(telf.trim())){
+            estadoTelf = true;
+        }else{
+           var mensajeTelf = $('#mensajeTelf');
+            mensajTelf.text('*Campo incorrecto');
+        }
+        return estadoTelf;
     
     
 });
