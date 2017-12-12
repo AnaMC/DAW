@@ -11,7 +11,7 @@
     var estadoEmail = validarEmail();
     var estadoSexo = validarSexo();
     
-        if( estadoNombre==false || estadoPass==false ){
+        if( estadoNombre==false || estadoPass==false || estadoEmail==false || estadoSexo == false ){
             e.preventDefault();
         }
         
@@ -65,14 +65,26 @@
         function validarSexo(){
             
             var estadoSexo = false;
-            var sexo = document.getElementsByClassName('radio');
+            var sexo = document.getElementsByName('radio');
             
-            if(sexo[0].checked==true || sexo[1].checked==true){
-                estadoSexo=true;
-            }else{
-                 errorS.innerText="*CampoIncorrecto";
+            for( var i=0; i<sexo.length ; i++ ){
+            
+                if(sexo[i].checked==true){
+                    estadoSexo = true;
+                }else{
+                    var errorS = document.getElementById('errorS');
+                   errorS.innerText="*CampoIncorrecto";
+                }
+                return estadoSexo;
             }
-            return estadoSexo;
+            
+            
+            // if(sexo[0].checked==true || sexo[1].checked==true){
+            //     estadoSexo=true;
+            // }else{
+            //      errorS.innerText="*CampoIncorrecto";
+            // }
+            // return estadoSexo;
         }
         
         
