@@ -23,8 +23,8 @@ class Telefono{
         return $this->telefono;
     }
     
-    function getDescrincion(){
-        return $this->Descrioncion;
+    function getDescripcion(){
+        return $this->descripcion;
     }
     
     function setId($id){
