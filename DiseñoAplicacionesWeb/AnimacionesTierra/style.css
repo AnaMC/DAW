@@ -1,0 +1,57 @@
+.wraper{
+    width: 100%;
+    margin: 0 auto;
+}
+.contenedor-tierra{
+    width: 200px;
+    height: 200px;
+    margin-left: 40%;
+    margin-top: 50px;
+    border-radius: 50%;
+    background-image: url(map-307294_960_720.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: rotar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    box-shadow: 0px 5px 15px #888;
+    background-color: lightskyblue;
+}
+
+.tierra{
+    position:absolute;
+    width:200px;
+    height:200px;
+    opacity: 0.4;
+    background:url(reflejo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: reflejo;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes rotar{
+    from{
+        background-position:0px 0px;
+    }
+    
+    to{
+        background-position: -180px 0px;
+    }
+}
+
+@keyframes reflejo{
+    from{
+        transform: rotate(10deg)
+    }
+    
+    50%{
+        transform: rotate(-80deg);
+    }
+    to{
+        transform: rotate(10deg);
+    }
+}
