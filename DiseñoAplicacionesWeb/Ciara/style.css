@@ -1,0 +1,180 @@
+                            /*RESET CSS*/
+
+@import url(http://reset5.googlecode.com/hg/reset.min.css);
+
+                            /*TIPOGRAFIAS*/
+@font-face {
+    font-family: pier;
+    src: url(Tipografias/PierSans-Light.ttf);
+}
+        
+@font-face {
+    font-family: pier-regular;
+    src: url(Tipografias/PierSans-Regular.otf);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.secciones {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*SECCION PRINCIPAL*/
+
+.principal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Images/CiaraBarrimore.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.navegacion p {
+    color: white;
+    display: inline-block;
+    font-family: pier;
+    margin-top: 4.88%;
+    /*44/900 = 0.0888*/
+    font-size: 1em;
+    /*20/16 = 1.25*/
+}
+
+#inicio {
+    margin-left: 9%;
+    /*100/900 = 0.1111 *900px Pantallas grandes*/
+    color: #C58D00;
+}
+
+#biografia {
+    margin-left: 3.66%;
+    /*33/900 = 0.03666*/
+}
+
+#galeria {
+    margin-left: 3.66%;
+    /*33/900 = 0.03666*/
+}
+
+#contacto {
+    margin-left: 3.66%;
+    /*33/900 = 0.03666*/
+}
+
+.textoInicio {
+    width: 35%;
+    margin-left: 16%;
+    margin-top: 12%;
+    /*319/900 = 0.4466*/
+    text-align: center;
+}
+
+.nombre {
+    color: #C58D00;
+    font-family: pier-regular;
+    font-size: 2.5em;
+    /*79/16 = 0.0912*/
+}
+
+.subrayado {
+    width: 100%;
+    /*315/900 = 0.35*/
+    height: 2px;
+    background-color: #C58D00;
+    margin-top: -5%;
+}
+
+.cita {
+    text-align: center;
+    width: 85%;
+    color: white;
+    font-family: pier;
+    margin-left: 6%;
+    /*443/900 = 0.4922*/
+    font-size: 1em;
+    /*18/16 = 1.12*/
+}
+
+
+/*SECCION INTRODUCCION*/
+
+.nombreTachado {
+    width: 25%;
+    /*528/900 = 0.5866*/
+    margin-left: 40%;
+}
+
+.intro {
+    position: absolute;
+    height: 36%;
+    /*324/900=0.36*/
+    width: 100%;
+    background-color: #443785;
+
+}
+
+#cb {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-family: pier-regular;
+    font-size: 1.9em;
+    /*31/16 = 1.93*/
+    margin-top: 6%;
+    /*57/900 = 0.0633*/
+}
+
+#tachado {
+    height: 1px;
+    background-color: white;
+    margin-top: -5%;
+}
+
+
+.textoIntro p {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-family: pier;
+    font-size: 1em;
+    /*16/16 = 1*/
+}
+
+#primerP {
+    margin-top: 3.1%;
+    /*28/900 = 0.031*/
+}
+
+.irBio p {
+    color: #C58D00;
+    font-family: pier-regular;
+    font-size: 1em; /*16/16*/
+    text-align: center;
+}
+
+.separador{
+    height: 4px;
+    background-image: url(Images/triangulos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
