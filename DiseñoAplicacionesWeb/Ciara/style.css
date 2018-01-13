@@ -241,4 +241,76 @@ body {
     width: 98.7vw;
     height: 100vh;
     background-color: black;
+    text-align: center;
 }
+
+.txtBox{
+    position: absolute;
+    height: 23%; /*202/900 = 0.2244*/
+    width: 49.72%; /* 920/1850 =0.4972*/
+    background-color: white;
+    margin-left: 25.13% ;/*50%(de 1850px)-460px = 465; 465/1850 = 0.2513    º460px es la mitad del textBox*/
+    font-family: pier-regular;
+    align-items: center;
+}
+
+#tituloActual{
+    font-size: 1.3em;
+    letter-spacing: 10px; 
+    font-size: 1em;
+}
+
+#txtActual p{
+    margin: 0;
+}
+
+#txtActual{
+    width: 88.69%;    /*530/920 = 38.69*/
+    height: 52%;
+    margin-left: 6%; 
+}
+
+.proyectoFotos{
+    position: absolute;
+/*    background-color: dimgrey;*/
+    width: 88.91%;    /*800/900 = 0.8891*/
+    height: 72.5%;   
+    margin-top: 15%;  /*235/900 = 0.2611*/
+    margin-left: 5%;
+}
+
+.proyectoFoto1{
+    position: absolute;
+    width:28.88%; /*(800-20)/3 = 0.2888 -> 800 espacio del contenedor para las fotos, -20 por el espacio que separará cada foto, /3 porque se repartirá entre 3 contenedores.*/
+    height: 96.12%; /*100%-3.88 = 96.12 º35px del espacio inferior entre la foto y la siguiente sección (35/900)*/ 
+    background-color: dodgerblue;
+    background-image: url(Images/proyecto1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.proyectoFoto2{
+    position: absolute;
+    width:28.88%; /*(800-20)/3 = 0.2888 -> 800 espacio del contenedor para las fotos, -20 por el espacio que separará cada foto, /3 porque se repartirá entre 3 contenedores.*/
+    height: 96.12%; /*100%-3.88 = 96.12 º35px del espacio inferior entre la foto y la siguiente sección (35/900)*/
+    background-color: forestgreen;
+    margin-left: 35.65%;/*40/800 = 0.05 -> 28.88 + (5 * 2) = 38.88*/
+    background-image: url(Images/proyecto2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.proyectoFoto3{
+    position: absolute;
+    width:28.88%; /*(800-20)/3 = 0.2888 -> 800 espacio del contenedor para las fotos, -20 por el espacio que separará cada foto, /3 porque se repartirá entre 3 contenedores.*/
+    height: 96.12%; /*100%-3.88 = 96.12 º35px del espacio inferior entre la foto y la siguiente sección (35/900)*/
+    background-color: deeppink;
+    margin-left: 71.1%;/*20/800 = 0.025 -> (28.88 * 2) + (5 * 3) = 72.76*/
+    background-image: url(Images/proyecto3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
