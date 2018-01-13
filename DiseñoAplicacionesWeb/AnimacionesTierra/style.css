@@ -27,7 +27,6 @@
     background:url(reflejo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    animation-name: reflejo;
     animation-duration: 15s;
     animation-iteration-count: infinite;
     
@@ -40,18 +39,5 @@
     
     to{
         background-position: -180px 0px;
-    }
-}
-
-@keyframes reflejo{
-    from{
-        transform: rotate(10deg)
-    }
-    
-    50%{
-        transform: rotate(-80deg);
-    }
-    to{
-        transform: rotate(10deg);
     }
 }

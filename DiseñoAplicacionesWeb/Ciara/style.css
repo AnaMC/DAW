@@ -30,7 +30,7 @@ body {
 
 .secciones {
     position: relative;
-    width: 100vw;
+    width: 98.7vw;
     height: 100vh;
 }
 
@@ -38,7 +38,7 @@ body {
 
 .principal {
     position: absolute;
-    width: 100vw;
+    width: 98.7vw;
     height: 100vh;
     background-image: url(Images/CiaraBarrimore.jpg);
     background-repeat: no-repeat;
@@ -122,7 +122,7 @@ body {
 
 .intro {
     position: absolute;
-    height: 36%;
+    height: 39%;
     /*324/900=0.36*/
     width: 100%;
     background-color: #443785;
@@ -146,14 +146,17 @@ body {
     margin-top: -5%;
 }
 
+.textoIntro{
+    width: 80%;
+    margin-left: 10%;
+}
 
 .textoIntro p {
     margin: 0;
     text-align: center;
     color: white;
     font-family: pier;
-    font-size: 1em;
-    /*16/16 = 1*/
+    font-size: 1em;  /*16/16 = 1*/
 }
 
 #primerP {
@@ -168,13 +171,74 @@ body {
     text-align: center;
 }
 
-.separador{
-    height: 4px;
-    background-image: url(Images/triangulos.png);
+.zigzag{
+    height: 5px;
+    width: 2%; /*19/900 = 0.02111*/
+    background-image:url(Images/triangulos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: 49%;
+    margin-top: -1%;
+}
+
+.barra2{
+    position: absolute;
+    height: 22.7%;    /* 115/521 = 0.2207 **521 es el espacio total que ocupa la barra superior ''.intro'' */ 
+    width: 100%;
+    background-color: #7C688B;
+    margin-top: 4.5%;
+}
+
+.introFotos{
+    position: absolute;
+    /*background-color: dimgrey;*/
+    width: 88.91%;    /*800/900 = 0.8891*/
+    height: 70.22%;   /*632/416 = 0.7022*/
+    margin-top: 15%;  /*235/900 = 0.2611*/
+    margin-left: 5%;
+}
+
+.introFoto1{
+    position: absolute;
+    width:28.88%; /*(800-20)/3 = 0.2888 -> 800 espacio del contenedor para las fotos, -20 por el espacio que separará cada foto, /3 porque se repartirá entre 3 contenedores.*/
+    height: 96.12%; /*100%-3.88 = 96.12 º35px del espacio inferior entre la foto y la siguiente sección (35/900)*/ 
+    background-color: dodgerblue;
+    background-image: url(Images/chica1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
+.introFoto2{
+    position: absolute;
+    width:28.88%; /*(800-20)/3 = 0.2888 -> 800 espacio del contenedor para las fotos, -20 por el espacio que separará cada foto, /3 porque se repartirá entre 3 contenedores.*/
+    height: 96.12%; /*100%-3.88 = 96.12 º35px del espacio inferior entre la foto y la siguiente sección (35/900)*/
+    background-color: forestgreen;
+    margin-left: 35.65%;/*40/800 = 0.05 -> 28.88 + (5 * 2) = 38.88*/
+    background-image: url(Images/chica2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 
+.introFoto3{
+    position: absolute;
+    width:28.88%; /*(800-20)/3 = 0.2888 -> 800 espacio del contenedor para las fotos, -20 por el espacio que separará cada foto, /3 porque se repartirá entre 3 contenedores.*/
+    height: 96.12%; /*100%-3.88 = 96.12 º35px del espacio inferior entre la foto y la siguiente sección (35/900)*/
+    background-color: deeppink;
+    margin-left: 71.1%;/*20/800 = 0.025 -> (28.88 * 2) + (5 * 3) = 72.76*/
+    background-image: url(Images/chica3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 
+            /*Sección Proyecto Actual*/
+
+.proyectoActual{
+    position: absolute;
+    width: 98.7vw;
+    height: 100vh;
+    background-color: black;
+}
