@@ -1,0 +1,26 @@
+*1. plantilla administracion 
+2. paginación
+3. seguridad/control: ¿el último administrador se puede borrar a sí mismo?
+4. avanzado -> modifica su correo sin necdesidad de volver a verificar
+5. he olvidado mi clave -> enlace -> correo + clave nueva * 2
+6. para cambiar la clave -> clave anterior + clave nueva * 2
+7. fechaalta -> intocable
+8. script sql -> create database ...; create table ...; insert into usuario (...)
+9. subir imagen / avatar de cada usuario en una carpeta externa (fuera de la raíz del servidor web)
+10. mvc
+
+fecha de entrega 22/01/2018
+
+*tabla usuario           
+-------------
+id            (pk)
+nombre
+apellidos
+nombreusuario (unique)(x)
+correo        (unique)(x)
+clave
+tipo          (administrador/avanzado/normal)
+fechaalta
+verificado
+
+tabla usuario: id, correo, clave, verificado
