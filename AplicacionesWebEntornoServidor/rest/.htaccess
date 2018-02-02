@@ -1,0 +1,9 @@
+# .htacces realmente DEBERIA estar en la carpeta superior que engloba a esta, de este modo cubre el caso de que no se pida nada
+# Le decimo que si llega y no sabe donde ir se vaya al sevidor rest
+# DirectoryIndex servidorrest.php
+# Hay que activar las reglas de escritura con un regex
+RewriteEngine On
+# L -> Last, la última regla que se le aplica si se le llega a aaplicar
+RewriteRule ^$ servidorrest.php[L]
+# He aquí la regex
+RewriteRule ^(.*)$ servidorrest.php?parametro$1=$1 [QSA]
