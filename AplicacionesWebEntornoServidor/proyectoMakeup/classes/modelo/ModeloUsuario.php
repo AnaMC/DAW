@@ -71,4 +71,14 @@ class ModeloUsuario extends Modelo {
         return $manager -> remove($usuario->getId()); //getId sale de usuario.php q es el q tiene el metodo para sacar el id
     }
     
+ function obtenerUsuario($id){               
+     $manager = new ManageUsuario($this->getDataBase());
+     return $manager->get($id);
+}
+
+function editarUsuario(){       /*Pisará*/
+    
+}
+
+    
 }

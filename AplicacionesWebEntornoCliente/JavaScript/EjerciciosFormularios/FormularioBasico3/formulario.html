@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de inscripción</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Formulario inscripción</h1>
+    <div class="wrapper">
+    <form action="formulario.html" method="get" name="formInscripcion" id="formInscripcion">
+        <fieldset>
+            <legend>Datos del usuario</legend>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"> 
+            <span id="mensajeE"></span>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Al menos 6 caracteres">
+            <span id="mensajeP"></span>
+            <br><br>
+            <label for="verificar">Confirme Password:</label>
+            <input type="password" id="verificar" name="verificar">
+            <span id="mensajePV"></span>
+            <br><br>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Información general</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <span id="mensajeN"></span>
+            <br><br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos">
+            <span id="mensajeA"></span>
+            <br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" placeholder="999-999-999">
+            <span id="mensajeTelf"></span>
+            <br><br>
+            <label for="sexo">Sexo:</label>
+            <br>
+            <input type="radio" name="genero" value="hombre">Hombre<br>
+            <input type="radio" name="genero" value="mujer"> Mujer<br>
+            <input type="radio" name="genero" value="other"> Otros<br>
+            <span id="mensajeGen"></span>
+            <br><br>
+        </fieldset>
+        <br>
+        <br>
+        
+        
+        
+        
+        <fieldset id="textArea">
+            <legend>¿Tienes alguna sugerencia? ¡Cuéntanosla!</legend>
+           <textarea id="textArea" rows="4" cols="50" maxlength="140">
+           </textarea>
+           <br>
+           
+           
+           
+          <label>Caracteres disponibles: <span id="disponibles"></span></label>
+          </fieldset>
+        
+        
+        
+        
+        <br>
+        <br>
+        <fieldset id="botones">
+            <legend>Envío de inscripción</legend>
+            <label></label>
+            <input type="checkbox" id="checkbox" value="acepto"/>Acepto los términos y condiciones de uso.<br>
+            <span id="terminos"></span>
+            <input type="submit" id="envio" name="envio" value=" Envío " disabled>
+            <input type="reset" id="borrar" name="borrar" value=" Reset ">
+            <br><br>
+            <label>**Todos los campos son obligarios:</label>
+        </fieldset>
+        </div>
+    </form>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="script.js"></script> 
+</body>
+
+</html> 

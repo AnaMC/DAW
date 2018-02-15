@@ -1,12 +1,12 @@
-create database proyectoMakeUp default character set utf8 collate utf8_unicode_ci;
+create database proyecto default character set utf8 collate utf8_unicode_ci;
 
-create user umakeup@localhost identified by 'cmekeup';
+create user uproyecto@localhost identified by 'cproyecto';
 
-grant all on proyectoMakeUp.* to umakeup@localhost;
+grant all on proyecto.* to uproyecto@localhost;
 
 flush privileges;
 
-use proyectoMakeUp;
+use proyecto;
 
 create table if not exists usuario (
     id bigint not null auto_increment primary key,
@@ -19,6 +19,7 @@ create table if not exists usuario (
     tipo tinyint(1) not null default 0, /*1-> administrador, 2-> avazzado, 3->normal*/
     fechaalta varchar(10) not null
 ) engine = innodb default character set = utf8 collate utf8_unicode_ci;
+
 
 create table if not exist maquillaje(
     id bigint not null auto_increment primary key,

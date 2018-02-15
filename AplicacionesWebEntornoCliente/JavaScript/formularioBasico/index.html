@@ -1,61 +1,77 @@
 <!DOCTYPE html>
-
-<html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TITULO</title>
-        <meta name="description" content="DESCRIPCION">
-        <link rel="stylesheet" href="style.css">      
 
-        <script src="script.js" defer></script> 
-        
-    </head>
-    
-    <body>
-        <form id="formulario">
-        <div class="wrapper">
-         
-         <h1>Formulario Basico: </h1>
-             
-            <label for="nombre">Nombre: </label>
-			<input type="text" id="nombre" name="nombre" />
-			<span id="error"></span>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de inscripción</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Formulario inscripción</h1>
+    <div class="wrapper">
+    <form action="formulario.html" method="get" name="formInscripcion" id="formInscripcion">
+        <fieldset>
+            <legend>Información de inscripción</legend>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"> 
+            <span id="mensajeE"></span>
             <br>
-            <label for="provincia">Provincia: </label>
-			<input type="text" id="nombre" name="provincia" />
-			<span id="errorPrv"></span>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Al menos 6 caracteres">
+            <span id="mensajeP"></span>
             <br>
-            <label for="Password">Password: </label>
-			<input type="text" id="pass" name="pas" />
-			<span id="errorP"></span>
-			 <br>
-			<label for="Password">Password: </label>
-			<input type="text" id="pass2" name="pas" />
-			 <br>
-			<label for="Email">Email: </label>
-			<input type="text" id="email" name="email" />
-			<span id="errorE"></span>
+            <label for="verificar">Confirme Password:</label>
+            <input type="password" id="verificar" name="verificar">
+            <span id="mensajePV"></span>
             <br>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Información general</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <span id="mensajeN"></span>
             <br>
-            <span>Sexo: </span>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos">
+            <span id="mensajeA"></span>
             <br>
-            <div class="respuestas">
-            <input type="radio" name="radio">
-            <span>"Hombre" </span>
-            <input type="radio" name="radio">
-            <span>"Mujer" </span> 
-            <span id="errorS"></span>
-            <br> 
             
-             <input type="Submit" value="Enviar" id="enviar" name="enviar">
-         
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" placeholder="Código de 2 caracteres">
+            <span id="mensajePr"></span>
+            <br>
+            
+            <label for="codPostal">Codigo postal:</label>
+            <input type="text" id="codPostal" name="codPostal" placeholder="99999">
+            <span id="mensajeCp"></span>
+            <br>
+            
+            <label for="telefono">Phone Number:</label>
+            <input type="text" id="telefono" name="telefono" placeholder="999-999-999">
+            <span id="mensajeTelf"></span>
+            <br>
+            
+            <label for="fecha">Fecha inicio:</label>
+            <input type="text" id="fecha" name="fecha">
+            <br>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset id="botones">
+            <legend>Envío de inscripción</legend>
+            <label>&nbsp;</label>
+            <input type="submit" id="envio" name="envio" value=" Envío ">
+            <input type="reset" id="borrar" name="borrar" value=" Reset ">
+            <br>
+        </fieldset>
         </div>
-        </form>
-    </body>
-    
-    <footer>
-    </footer>
-    
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script> 
+</body>
+
 </html>

@@ -99,7 +99,7 @@ class ControladorUsuario extends Controlador {
         }
     }
     
-    function deleteusuario(){
+    function deleteusuario(){               //Funcion que hace op (header)
         $id = Request::read('id');
         if($this->isAdministrator()){
             // con getModel hacemos la operaciones sobre la base de datos
@@ -110,6 +110,16 @@ class ControladorUsuario extends Controlador {
         // Redirige otra vez al index (no estamos renderizando una plantilla nueva, simplemente hacemos una operación)
         header('Location: index.php?accion=tablausuarios&op=borrar&res=' . $r);
         exit();
+    }
+    
+      function editarusuario(){
+        if($this->isLogged()){          //Funcion que edita plantillas
+            $id=Request::read('id');
+            $this->getModel()->setDato('archivo', 'plantilla/edit.html');
+            $this->getModel()->setDato('id', $id);   //los datosestos serán los que se cambiaran x las llaves
+            $usuario = $this->getModel()->obtenerUsuario($id);
+            // $this->getModel()->setDato('nombre', getNombre($usuario));
+        }
     }
    
 }

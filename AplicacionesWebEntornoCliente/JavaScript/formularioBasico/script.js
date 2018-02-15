@@ -39,7 +39,7 @@
             var provincia = document.getElementById('provincia');
             var estadoProvincia=false;
             
-            if(provincia.length < 6){
+            if(provincia.length < 6                                                                                                                                                                                                                                                                                                                 ){
                estadoProvincia = true;
             }else{
                 var errorPrv = document.getElementById('error');
