@@ -17,8 +17,11 @@ reset.addEventListener('click', resetear);
 var checkbox = document.getElementById('checkbox');
 checkbox.addEventListener('change',  enabled );
 
+var textArea = document.getElementById('textArea');
+textArea.addEventListener('keyup', caracteres);
+
 function enviar(e){ // Le pasamos el evento
-    if(!genero() || !email() || !nombre() || !telefono() ){
+    if(!genero() || !email() || !generica('nombre', 3) || !generica('telefono', 9) ){
        e.preventDefault(); 
     }
 }
@@ -60,8 +63,6 @@ function email(){
 function enabled(){
     
     var r = false;
-    var boton = document.getElementById('envio');
-    
     if( checkbox.checked){
         r = true;
         boton.disabled = false;
@@ -102,13 +103,28 @@ function telefono(){
 }
   
   
-//  function caracteres(){
-//      var nCaracteres = document.getElementById('textArea').maxLength;
-//      var disponibles = document.getElementById('disponibles');
+function generica( id , longitud ){
+    var elemento = document.getElementById(id).value;
+    var r = false;
+        
+    if(elemento.length > longitud){
+        r = true; 
+     }
+    return r;
+}  
+  
+
+  
+  function caracteres(){
+      var nCaracteres = document.getElementById('textArea').maxlength;
+      var disponibles = document.getElementById('disponibles');
+      var escritos = document.getElementById('textArea').value;
+      var restantes = nCaracteres - escritos;
+ 
+      disponibles.innerText = 'quedan ' + restantes;
      
-//      disponibles.innerText = 'quedan ' + nCaracteres;
      
-//  }
+  }
 
 
     

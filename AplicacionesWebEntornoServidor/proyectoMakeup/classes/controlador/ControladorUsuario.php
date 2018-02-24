@@ -116,9 +116,10 @@ class ControladorUsuario extends Controlador {
         if($this->isLogged()){          //Funcion que edita plantillas
             $id=Request::read('id');
             $this->getModel()->setDato('archivo', 'plantilla/edit.html');
-            $this->getModel()->setDato('id', $id);   //los datosestos serán los que se cambiaran x las llaves
+            $this->getModel()->setDato('id', $id);   //los datos estos serán los que se cambiaran x las llaves
             $usuario = $this->getModel()->obtenerUsuario($id);
-            // $this->getModel()->setDato('nombre', getNombre($usuario));
+            
+            $this->getModel()->setDato('nombre', getNombre($usuario));
         }
     }
    
