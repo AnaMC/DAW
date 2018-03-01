@@ -1,0 +1,52 @@
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.comun{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 50px;
+}
+
+.cuadro1{
+    border: 1px solid #1a2b44;
+    border-radius: 80px 10px;
+}
+
+.cuadro1:hover{
+    background-color: #6a6d72;
+    color: white;
+}
+
+.cuadro2{
+    border: 1px dashed #1a2b44;
+    border-radius: 70px 70px 15px 15px;
+}
+
+.cuadro2:hover{
+    background-color: #4d77bc;
+    color: white;
+}
+
+.cuadro3{
+    border: 1px groove #1a2b44;
+    border-radius: 10px 10px 90px 90px;
+}
+
+.cuadro3:hover{
+    background-color: #76bc95;
+    color: white;
+}
+
+.cuadro4{
+   border: 1px groove #1a2b44;
+    border-radius: 90px 90px 90px 90px ;
+}
+
+.cuadro4:hover{
+    background-color: #d67e4f;
+    color: white;
+}
